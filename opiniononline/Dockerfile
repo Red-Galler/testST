@@ -28,9 +28,6 @@ RUN --mount=type=bind,source=package.json,target=package.json \
 # Copy the rest of the source files into the image
 COPY . .
 
-# Copy the 'features' directory
-COPY features /usr/src/app/features
-
 COPY .env /usr/src/app
 
 # Expose the port that the application listens on
