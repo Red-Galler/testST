@@ -25,6 +25,9 @@ RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=bind,source=package-lock.json,target=package-lock.json \
     npm ci --omit=dev
 
+# Install npm dependencies
+RUN npm install
+
 # Copy the rest of the source files into the image
 COPY . .
 
